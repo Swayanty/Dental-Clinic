@@ -1,0 +1,250 @@
+/* ===== Global Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0; /* remove default margin */
+    padding: 0; /* remove default padding */
+    box-sizing: border-box; /* include padding and border in element width/height */
+    font-family: 'Poppins', sans-serif; /* set font */
+}
+
+/* ===== Colors ===== */
+:root {
+    --maincolor: #2ec8a6; /* main theme color */
+    --accentcolor: #e8580c; /* accent color for highlights */
+    --bluecolor: #0ca2e8; /* main blue color */
+}
+
+/* ===== Body ===== */
+body {
+    background-color: #ebedf5; /* light background */
+    color: var(--bluecolor); /* default text color */
+    padding-top: 100px; /* so header doesn't overlap content */
+}
+
+/* ===== Header ===== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent; /* header is see-through */
+    backdrop-filter: blur(10px); /* blur behind header */
+    z-index: 100; /* stay on top */
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(270deg, #a69aec 10%, var(--bluecolor) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: transform 0.3s ease-in-out; /* smooth hover */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* small zoom on hover */
+}
+
+.navbar a {
+    font-size: 18px;
+    color: var(--bluecolor);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--accentcolor);
+    border-bottom: 2px solid #ff1d15; /* small underline effect */
+}
+
+/* ===== Home Section ===== */
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 5% 30px;
+    text-align: center;
+}
+
+.home-container {
+    max-width: 600px;
+    margin: 120px 30px 0 0; /* spacing from top */
+}
+
+.home-container h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.home-container h3 {
+    font-size: 37px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.home-container h3 span {
+    color: var(--accentcolor); /* highlight certain text */
+}
+
+.home-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.home-img img {
+    height: 300px;
+    width: 330px;
+    border-radius: 20%; /* rounded corners */
+    box-shadow: 0 0 25px var(--bluecolor); /* blue shadow */
+    margin-top: 3rem;
+}
+
+/* ===== Buttons ===== */
+.btn, .btn-submit {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--maincolor);
+    border-radius: 4rem; /* pill shape */
+    box-shadow: 0 0 1rem var(--maincolor);
+    font-size: 1.2rem;
+    color: #1f242d;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.btn:hover, .btn-submit:hover {
+    box-shadow: none; /* remove shadow on hover */
+}
+
+/* ===== Cards ===== */
+.card {
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* lift effect */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-img {
+    width: 100%;
+    max-width: 300px;
+    height: 450px;
+    object-fit: cover; /* make image fit nicely */
+    border-radius: 10px;
+}
+
+/* ===== Icons ===== */
+.icon-lg {
+    font-size: 48px; /* big icon */
+    color: var(--bluecolor);
+    cursor: pointer; /* pointer on hover */
+    transition: color 0.3s;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background: var(--bluecolor);
+    color: white;
+    padding: 40px 10%;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-about, .footer-links, .footer-contact {
+    flex: 1 1 250px;
+}
+
+.footer-about h3, .footer-links h4, .footer-contact h4 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--accentcolor);
+}
+
+.footer-contact p {
+    margin: 6px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 10px;
+}
+
+/* ===== Contact / Form ===== */
+.contact-card, .login-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* ===== Social Media ===== */
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--bluecolor);
+    border-radius: 50%;
+    color: var(--bluecolor);
+    text-decoration: none;
+    margin: 0 5px;
+    transition: all 0.3s;
+}
+
+.social-media a:hover {
+    background: var(--bluecolor);
+    color: var(--accentcolor);
+}
+
+/* ===== Small icons for student style ===== */
+.icon-small {
+    font-size: 20px; /* small icon */
+    color: var(--bluecolor);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icon-small.clicked {
+    color: var(--accentcolor); /* color on click */
+}

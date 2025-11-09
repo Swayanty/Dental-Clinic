@@ -1,0 +1,153 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+
+
+body {
+    background-color: #ebedf5;
+    color: #0ca2e8;
+  padding-top: 100px; /* 🟢 fixes overlap issue */
+}
+
+
+/*  */
+.logo{
+    font-size: 25px;
+    color: #2ec8a6;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: -0.3s ease-in-out;
+     background: linear-gradient(
+        270deg,
+        /* #d5f8fd 10%,
+        #0ef 100%); */
+        #a69aec 10%,
+        #0ca2e8 100%);
+        background-clip: text;
+        color: transparent;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+
+
+.card:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+:root{
+     --maincolor:#2ec8a6;
+     /* --main-color:#0ef; */
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%;
+    padding: 20px 0%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.navbar a{
+    font-size: 18px;
+    color: #0ca2e8;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: -0.3s ease-in-out;
+    
+}
+.navbar a:hover,
+.navbar a.active{
+    /* color: #0ef; */
+    color: #e8580c;
+     /* border-bottom: 2px solid  #0ef; */
+    border-bottom: 2px solid #ff1d15; 
+}
+
+
+
+
+/* ===== Footer Section ===== */
+/* ===== Footer Section ===== */
+.footer {
+  background: #0ca2e8;
+  color: white;
+  padding: 40px 10%;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-about, .footer-links, .footer-contact {
+  flex: 1 1 250px;
+}
+
+.footer-about h3, .footer-links h4, .footer-contact h4 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #e8580c;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 10px;
+}
+
+
+.service-img {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;  /* keeps image looking normal */
+    border-radius: 10px;
+}
